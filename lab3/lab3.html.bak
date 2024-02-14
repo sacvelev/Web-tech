@@ -1,0 +1,67 @@
+<html>
+<title>Lab3</title>
+<body>
+Текст
+<form>
+
+<input type="text">
+
+</form>
+
+<br>
+
+Пароль
+<form>
+
+<input type="password">
+
+<br>
+
+Многострочный текст
+<br>
+<form>
+
+<input type="textarea">
+
+</form>
+
+<br>
+
+Независимые переключатели
+<br>
+<form>
+
+  <input type="checkbox" name="example" value="1"> 1<br>
+  <input type="checkbox" name="example" value="2"> 2<br>
+  <input type="checkbox" name="example" value="3"> 3<br>
+  
+</form>
+
+<br>
+
+Зависимые переключатели
+<br>
+<form>
+
+  <input type="radio" name="example" value="1" checked> 1<br>
+  <input type="radio" name="example" value="2"> 2<br>
+  <input type="radio" name="example" value="3"> 3
+  
+</form>
+
+<br>
+
+Выбор из списка
+<br>
+<form>
+<select name="example">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+</select>
+</form>
+
+
+
+</body>
+</html>

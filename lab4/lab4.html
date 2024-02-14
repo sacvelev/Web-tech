@@ -1,0 +1,200 @@
+<html>
+<title>Lab4</title>
+
+<head>Упражнение 1</head>
+<br>
+<head>Задание 1</head>
+
+
+<script>
+    function checkresult() {
+        var result = window.confirm("Нажмите «ОК» или «Отмена»");
+		
+        if (result) {
+            alert("Вы нажали ОК");
+        } else {
+            alert("Вы нажали Отмена");
+        }
+    }
+</script>
+<button onclick="checkresult()">Задание 1</button>
+
+<br>
+<head>Задание 2</head>
+
+<script>
+    function lastname() {
+        var surname = window.prompt("Введите фамилию");
+		
+        if (surname !== null) {
+            alert("Здравсвуйте, " + surname);
+		}
+	}
+</script>
+<button onclick="lastname()">Задание 2</button>
+
+<br>
+<head>Задание 3</head>
+
+<script>
+    function ticket() {
+        var name = window.prompt("Как вас зовут?");
+        int age = window.prompt("Сколько вам лет?");
+        var mood = window.prompt("Какое у вас настроение?");
+        
+        if (name !== null && age !== null && mood !== null) {
+            var correct = window.confirm("Здравствуй, " + name + ". Тебе " + age + " лет, и у тебя " + mood + " настроение! Всё верно, не так ли?");
+            
+            if (!correct) {
+                ticket();
+            }
+        }
+    }
+</script>
+<button onclick="ticket()">Задание 3</button>
+
+<br>
+<head>Задание 4</head>
+
+<script>
+	function parse() {
+		var x = prompt("Введите значение x ", "0");
+		var y = prompt("Введите значение y ", "0.0");
+
+		var integerX = parseInt(x);
+		var floatY = parseFloat(y);
+
+		var result = integerX + floatY;
+
+		document.write("Результат сложения: " + result);
+	}
+</script>
+<button onclick="parse()">Задание 4</button>
+
+<br>
+<head>Задание 5</head>
+
+<script>
+	function fix() {
+		var firstName = prompt("Введите имя ", + "сюда");
+		var lastName = prompt("Введите фамилию");
+		var age = prompt("Введите возраст");
+		
+		alert("В следующем году вам будет " + (parseInt(age) + 1));
+	}
+</script>
+<button onclick="fix()">Задание 5</button>
+
+<br>
+<p id="ID1">Это текст для абзаца с ID1</p>
+<p id="ID2">Это текст для абзаца с ID2</p>
+<p id="ID3">Это текст для абзаца с ID3</p>
+<br>
+<br>
+<head>Задание 6</head>
+<script>
+    function paragraph() {
+		
+        var inputID = prompt("Введите ID абзаца (ID1, ID2, ID3):");
+        var paragraph = document.getElementById(inputID);
+
+        if (paragraph) {
+            alert(paragraph.innerHTML);
+        } else {
+            alert("Абзац с указанным ID не найден.");
+        }
+    }
+</script>
+<button onclick="paragraph()">Задание 6</button>
+
+<br>
+<head>Задание 7</head>
+<script>
+    function paragraphprompt() {
+		
+        var inputID = prompt("Введите ID абзаца (ID1, ID2, ID3):");
+        var paragraph = document.getElementById(inputID);
+
+        if (paragraph) {
+		var newText = prompt("Введите новый текст для абзаца:");
+            paragraph.innerHTML = newText;
+        } else {
+            alert("Абзац с указанным ID не найден.");
+        }
+    }
+</script>
+<button onclick="paragraphprompt()">Задание 7</button>
+
+<br>
+<br>
+<head>Упражнение 2</head>
+<br>
+<head>Первый блок. Задание 1</head>
+<script>
+    function hour() {
+        var min = prompt("Введите число от 0 до 59:");
+        
+        if (min !== null) {
+            min = parseInt(min);
+
+            if (min >= 0 && min <= 14) {
+                alert("Попадает в первую четверть часа");
+            } else if (min >= 15 && min <= 29) {
+                alert("Попадает во вторую четверть часа");
+            } else if (min >= 30 && min <= 44) {
+                alert("Попадает в третью четверть часа");
+            } else if (min >= 45 && min <= 59) {
+                alert("Попадает в четвертую четверть часа");
+            } else {
+                alert("Ошибка, неправильное значение!");
+            }
+        }
+    }
+</script>
+<button onclick="hour()">Задание 1</button>
+
+<br>
+<head>Второй блок. Задание 11</head>
+<script>
+    function sqrt() {
+        var number = 379;
+        var root = Math.sqrt(number);
+
+        var rounded1 = Math.round(root);
+        var rounded2 = Math.round(root * 10) / 10;
+        var rounded3 = Math.round(root * 100) / 100;
+
+        alert("Квадратный корень из 379: " + root +
+            "\nОкруглено до целых: " + rounded1 +
+            "\nОкруглено до десятых: " + rounded2 +
+            "\nОкруглено до сотых: " + rounded3);
+    }
+</script>
+<button onclick="sqrt()">Задание 11</button>
+
+<br>
+<head>Третий блок. Задание 21</head>
+<script>
+    function square(a, b) {
+        while (b !== 0) {
+            var temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    function squarecount() {
+        var sideA = parseInt(prompt("Сторона a:"));
+        var sideB = parseInt(prompt("Сторона b:"));
+
+        var divisor = square(sideA, sideB);
+        var count = (sideA * sideB) / (divisor * divisor);
+
+        alert("Количество квадратов: " + count);
+    }
+</script>
+<button onclick="squarecount()">Задание 21</button>
+
+
+</html>
